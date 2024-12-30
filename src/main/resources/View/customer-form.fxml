@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#123657" height="95.0" layoutX="-9.0" stroke="BLACK" strokeType="INSIDE" width="621.0" />
+      <Label layoutX="216.0" layoutY="38.0" text="Customer Form" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="420.0" layoutY="126.0" promptText="Name" />
+      <ComboBox fx:id="cmbTitle" layoutX="228.0" layoutY="126.0" prefWidth="150.0" promptText="Title" />
+      <TextField fx:id="txtSalary" layoutX="420.0" layoutY="176.0" promptText="Salary" />
+      <TextField fx:id="txtAddress" layoutX="229.0" layoutY="176.0" promptText="Address" />
+      <TableView fx:id="tblCustomers" layoutX="53.0" layoutY="244.0" prefHeight="148.0" prefWidth="501.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="83.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="109.0" text="Name" />
+            <TableColumn fx:id="colDOB" prefWidth="92.0" text="DOB" />
+            <TableColumn fx:id="colAddress" prefWidth="122.0" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="94.0" text="Salary" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtID" layoutX="47.0" layoutY="126.0" prefHeight="25.0" prefWidth="159.0" promptText="ID" />
+      <DatePicker fx:id="dateDOB" layoutX="47.0" layoutY="176.0" prefHeight="25.0" prefWidth="159.0" promptText="DOB" />
+      <Button layoutX="531.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnAddCustomerOnAction" text="Add" />
+   </children>
+</AnchorPane>
